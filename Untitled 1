@@ -1,0 +1,34 @@
+Design Patterns
+Design pattern is just a convenient way to of reusing object oriented code between projects and programs.
+Singleton Design patterns: I have developed an in-memory access system in an dfs application which returns single instance no matter how many time you call the instance.
+In certain time we decide to use only one file system. Usually we may use it for centralized management of resources.
+========================================================================================================================
+Factory Design Pattern: depending on data provided to it simple factory design pattern will return instance of a class among several classes.
+===============================================================================================================================
+Abstract Factory Design Pattern ---> this design pattern is used for returning specific instance that you want for example if you have multiple departments in a university and you specifically call instance of csc amoung multiple instance this design pattern is useful
+=================================================================================================================================
+Singleton Design pattern is used for creating database or file system's instances because once instance created initially when jvm loads application it should make use same instance repeatedly
+1.	eager initialization --> simply create instance using static keyword then turn your constructor private and return using getInstance method
+2.	static block initialization --> create instance in static block, private constructor and return using get instance method this will help you to add try catch while creating instance
+3.	lazy initialization --> similar to eager initialization but small difference that check for null in genInstance method and if null create instance else return instance
+4.	thread safe singleton initialization --> use sychronized block with double locking check
+5.	bill Pugh singleton initialization --> inner static class and call using class name for getting instance
+6.	ENUM singleton --> ENUM creation itself is a singleton design pattern
+7.	Reflections can fail singleton implementation
+8.	Serialized Singleton --> while creating instance for instantiating instance for file system we need to serialize and create instance but each time you de-serialize it will generate brnad new instance 
+
+
+
+Note: - Java Singleton classes must be globally accessible.
+
+========================================================================================================================================
+Prototype Design pattern are used when object creation is costly which means resource taking and time consuming we use prototype design pattern to java clone object to brand new object without creation and modify it according to the needs.
+	example to prototype is database objects creation which loads data in our program multiple times and needs manipulation on it
+	
+	Note:- once you implement prototype by return clone object, client needs to load once use clone and modify several time without recreating.
+	
+=================================================================================================================================================
+gmuddasani@paypal.com
+====================================================================================================================================================
+
+Dependency Injection Design Pattern ----> 	Java dependancy injection allows releases hardcoded dependencies and turns application into loosely coupled applications
